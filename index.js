@@ -76,8 +76,9 @@ window.addEventListener("load", () => {
 		taskForm.reset();
 
 		deleteSubmittedTaskBtn.addEventListener("click", e => {
-			const submittedTaskToDelete = e.target
-			console.log(submittedTaskToDelete)
+			const submittedTaskToDeleteIcon = e.target
+			const deleteSubmittedtask = submittedTaskToDeleteIcon.closest(".submitted_task")
+			deleteSubmittedtask.remove();
 		})
 	})
 });
