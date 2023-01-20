@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Rowdies&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Rowdies", cursive;
+  background-color: #051721;
+  background-image: url("https://www.transparenttextures.com/patterns/grid-me.png");
+  color: #0B3040;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  background-color: #F1BE27;
+  letter-spacing: 2px;
+}
+nav img {
+  width: 50px;
+  margin-right: 10px;
+}
+
+button {
+  cursor: pointer;
+}
+
+header {
+  background-color: #F1BE27;
+  width: 320px;
+  text-align: center;
+  margin: 50px auto;
+  border-radius: 20px;
+  padding-bottom: 10px;
+}
+header h3 {
+  padding: 10px 0 20px 0;
+}
+header button {
+  display: block;
+  width: 60%;
+  margin: 0 auto;
+  font-size: 25px;
+}
+header #submit {
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+  border-radius: 20px;
+  padding: 15px;
+  margin-top: 15px;
+}
+
+input,
+button {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+#new_task_form input {
+  display: block;
+  margin: 0 auto;
+  width: 90%;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 15px;
+  letter-spacing: 3px;
+  font-weight: bold;
+  border: 1px solid black;
+}
+#new_task_form input::-moz-placeholder {
+  color: #051721;
+}
+#new_task_form input:-ms-input-placeholder {
+  color: #051721;
+}
+#new_task_form input::placeholder {
+  color: #051721;
+}
+
+#submitted_tasks_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.submitted_task {
+  background-color: #F1BE27;
+  width: 365px;
+  margin: 50px auto;
+  text-align: center;
+  border-radius: 15px;
+  position: relative;
+}
+.submitted_task input {
+  margin: 10px 0;
+  text-align: center;
+  font-size: 16px;
+  letter-spacing: 2px;
+  font-weight: bold;
+  width: 100%;
+}
+.submitted_task .tasks {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  width: 95%;
+  margin: 0 auto;
+  position: relative;
+}
+.submitted_task .tasks button {
+  margin: 0 10px;
+}
+.submitted_task .delete_submitted_task_btn {
+  position: absolute;
+  top: -14px;
+  right: 15px;
+  color: red;
+  background-color: gray;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 15px;
+}
+.submitted_task .action_buttons_container {
+  display: flex;
+  justify-content: space-between;
+}/*# sourceMappingURL=styles.css.map */

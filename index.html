@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Lista Mona!</title>
+	<!-- CSS Links -->
+	<link rel="stylesheet" href="/styles/styles.css">
+	<!-- Fontawesome Link -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+		integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+	<nav>
+		<img src="images/logo.png" alt="Lista_Mona_logo">
+		<h1>Lista Mona!</h1>
+	</nav>
+	<header>
+		<h3>Be Organized!</h3>
+		<form id="new_task_form">
+			<input type="text" name="new_task_title" id="new_task_title" placeholder="Title:" />
+			<input type="text" name="new_task_input" class="new_task_input" placeholder="What's your plan?" />
+			<!-- <input type="text" name="new_added_task" class="new_task_input new_added_task"
+				placeholder="What's your added plan?"> -->
+		</form>
+		<button id="add_task_button"><i class="fa-solid fa-plus"></i></button>
+		<button id="submit" form="new_task_form">Submit Tasks</button>
+	</header>
+	<main>
+		<div id="submitted_tasks_container">
+			<!-- <div class="submitted_task">
+				<button class="delete_submitted_task_btn"><i class="fa-solid fa-trash"></i></button>
+				<input type="text" name="new_task_title" value="Title Here" readonly />
+				<div class="tasks">
+					<input type="text" name="new_added_task" class="new_task_input new_added_task" value="Additional Task"
+						readonly>
+					<div class="action_buttons_container">
+						<button class="edit_button action_button"><i class="fa-solid fa-pen-to-square"></i></button>
+						<button class="delete_button action_button"><i class="fa-solid fa-delete-left"></i></button>
+					</div>
+				</div>
+			</div> -->
+		</div>
+	</main>
+	<script src="index.js"></script>
+</body>
+
+</html>
