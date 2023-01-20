@@ -56,13 +56,17 @@ window.addEventListener("load", () => {
 					editButton.innerHTML = `<i class="fa-solid fa-check"></i>`
 					inputTask.removeAttribute("readonly")
 					inputTask.focus()
+
 				}
 				else {
 					editButton.innerHTML = `<i class="fa-solid fa-pen-to-square"></i>`
 					inputTask.readOnly = true
 				}
 			})
-
+			inputTask.addEventListener("blur", () => {
+				editButton.innerHTML = `<i class="fa-solid fa-pen-to-square"></i>`
+				inputTask.readOnly = true
+			})
 			deleteButton.addEventListener("click", e => {
 				const taskToBeDeletedIcon = e.target
 				const parentOfToBeDeletedIcon = taskToBeDeletedIcon.closest(".tasks")
