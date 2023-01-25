@@ -141,29 +141,51 @@ button {
 }
 
 #modal {
-  width: 320px;
+  width: 100%;
   position: absolute;
-  top: 320px;
+  top: 290px;
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 20px;
-  background-color: rgba(128, 128, 128, 0.5);
+  background-color: white;
   z-index: 1;
   display: none;
   box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  border-top: 20px solid #FD9290;
+  text-align: center;
+  letter-spacing: 2px;
+}
+#modal span {
+  color: #FD9290;
 }
 #modal button {
+  right: 20px;
   position: absolute;
-  right: 1px;
-  top: -8px;
-  width: 5%;
-  color: red;
-  font-size: 26px;
+  top: 20px;
+  font-size: 25px;
 }
-#modal h2 {
-  width: 60%;
-  margin: 29% auto;
-  text-align: center;
-  line-height: 1.5;
-  letter-spacing: 3px;
+#modal h3 {
+  margin-bottom: 45px;
+}
+#modal h5 {
+  color: gray;
+  margin-bottom: 45px;
+}
+
+#modal-details {
+  display: flex;
+  align-items: center;
+  margin: 100px 0 60px 0;
+  justify-content: center;
+  color: #FD9290;
+}
+#modal-details i {
+  font-size: 50PX;
+  margin-right: 25px;
+}
+
+@media only screen and (min-width: 768px) {
+  #modal {
+    width: 630px;
+  }
 }/*# sourceMappingURL=styles.css.map */
