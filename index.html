@@ -18,10 +18,14 @@
 		<img src="images/logo.png" alt="Lista_Mona_logo">
 		<h1>Lista Mona!</h1>
 	</nav>
+	<div id="modal">
+		<button class="close-button"><i class="fa-solid fa-xmark"></i></button>
+		<h2>Please input a task before submitting </h1>
+	</div>
 	<header>
 		<h3>Be Organized!</h3>
 		<form id="new_task_form">
-			<input type="text" name="new_task_title" id="new_task_title" placeholder="Title:" />
+			<input type="text" name="new_task_title" id="new_task_title" placeholder="Title:(Optional)" />
 			<input type="text" name="new_task_input" class="new_task_input" placeholder="What's your plan?" />
 			<!-- <input type="text" name="new_added_task" class="new_task_input new_added_task"
 				placeholder="What's your added plan?"> -->
@@ -44,6 +48,7 @@
 				</div>
 			</div> -->
 		</div>
+
 	</main>
 	<script src="index.js"></script>
 </body>

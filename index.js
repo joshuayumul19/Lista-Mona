@@ -41,6 +41,21 @@ window.addEventListener("load", () => {
 			inputTask.readOnly = true
 			inputTask.classList.add("new_added_task")
 			inputTask.value = inputTaskValue[index].value
+			if (!inputTask.value) {
+				const modal = document.getElementById("modal")
+				const header = document.querySelector('header')
+				const main = document.querySelector('main')
+				const closeButton = document.querySelector(".close-button")
+				modal.style.display = "block"
+				header.classList.add("blur")
+				main.classList.add("blur")
+				closeButton.addEventListener("click", () => {
+					modal.style.display = "none"
+					header.classList.remove("blur")
+					main.classList.remove("blur")
+				})
+				return
+			}
 			inputTasksContainer.appendChild(inputTask)
 			actionButtonContainer.classList.add("action_buttons_container")
 			editButton.classList.add("edit_button")
@@ -71,18 +86,21 @@ window.addEventListener("load", () => {
 				const taskToBeDeletedIcon = e.target
 				const parentOfToBeDeletedIcon = taskToBeDeletedIcon.closest(".tasks")
 				parentOfToBeDeletedIcon.remove()
+				const remainingInputs = submittedTask.querySelectorAll(".tasks").length
+				if (remainingInputs == 0) {
+					submittedTask.remove()
+				}
 			})
 		}
 		submittedTaskContainer.appendChild(submittedTask)
 		const addedTasks = document.querySelectorAll("#new_task_form .new_added_task")
 		addedTasks.forEach(node => node.remove());
-		const taskForm = document.getElementById("new_task_form")
-		taskForm.reset();
-
 		deleteSubmittedTaskBtn.addEventListener("click", e => {
 			const submittedTaskToDeleteIcon = e.target
 			const deleteSubmittedtask = submittedTaskToDeleteIcon.closest(".submitted_task")
 			deleteSubmittedtask.remove();
 		})
+		const taskForm = document.getElementById("new_task_form")
+		taskForm.reset();
 	})
 });

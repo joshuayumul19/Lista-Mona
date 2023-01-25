@@ -14,7 +14,8 @@ body {
 	font-family: $font_family;
 	background-color: #051721;
 	background-image: url("../images/grid-me.png");
-	color: $font_color
+	color: $font_color;
+
 }
 
 nav {
@@ -75,7 +76,6 @@ button {
 }
 
 #new_task_form {
-
 	input {
 		display: block;
 		margin: 0 auto;
@@ -144,5 +144,39 @@ button {
 	.action_buttons_container {
 		display: flex;
 		justify-content: space-between;
+	}
+}
+
+.blur {
+	filter: blur(5px);
+}
+
+#modal {
+	width: 320px;
+	position: absolute;
+	top: 320px;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 20px;
+	background-color: rgba(128, 128, 128, 0.5);
+	z-index: 1;
+	display: none;
+	box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+
+	button {
+		position: absolute;
+		right: 1px;
+		top: -8px;
+		width: 5%;
+		color: red;
+		font-size: 26px;
+	}
+
+	h2 {
+		width: 60%;
+		margin: 29% auto;
+		text-align: center;
+		line-height: 1.5;
+		letter-spacing: 3px;
 	}
 }
