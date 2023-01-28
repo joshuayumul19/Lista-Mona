@@ -1,6 +1,8 @@
 window.addEventListener("load", () => {
+	// Array that fetch the saved tasks(object) in the local storage
 	submittedActivity = JSON.parse(localStorage.getItem("activity")) || []
-	//Clicking of "+" Icon
+
+	//Clicking of "+" Icon/ Addition of task
 	const addTaskBtn = document.querySelector("#add_task_button")
 	addTaskBtn.addEventListener("click", () => {
 		const form = document.querySelector("#new_task_form")
@@ -11,6 +13,7 @@ window.addEventListener("load", () => {
 		newInput.placeholder = "What's your added plan?"
 		form.appendChild(newInput)
 	})
+
 	//Submission of tasks
 	const submitBtn = document.querySelector("#submit")
 	submitBtn.addEventListener("click", (e) => {
@@ -30,12 +33,15 @@ window.addEventListener("load", () => {
 		inputTitleElement.readOnly = true
 		inputTitleElement.value = titleValue.value
 		submittedTask.appendChild(inputTitleElement)
+
+		// Task(object) creation to be pushed at array "submittedActivity"
 		const taskToSubmit = {
 			id: Math.random().toString(36),
 			title: inputTitleElement.value,
 			tasks: []
 		}
 
+		// Loop that iterates throughout the number of tasks given by the user and create its container
 		for (let index = 0; index < inputTaskValue.length; index++) {
 			const inputTasksContainer = document.createElement("div")
 			const inputTask = document.createElement("input")
@@ -49,10 +55,14 @@ window.addEventListener("load", () => {
 			inputTask.readOnly = true
 			inputTask.classList.add("new_added_task")
 			inputTask.value = inputTaskValue[index].value
+
+			//"Tasks" array property creation to be pushed at object "taskToSubmit"
 			taskToSubmit.tasks.push({
 				id: Math.random().toString(36),
 				value: inputTask.value
 			})
+
+			//Checks if the added task is blank / null if so, will return a ERROR Modal
 			if (!inputTask.value) {
 				const modal = document.getElementById("modal")
 				const header = document.querySelector('header')
