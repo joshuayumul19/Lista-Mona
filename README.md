@@ -1,5 +1,5 @@
 # Lista-Mona
-  This is a simple project activity I made using HTML, CSS(SCSS) and JavaScript, Lista Mona is a Tagalog Term of "List It!", it is a simple to do list than can have multiple notes 
+  This is a simple project activity I made using HTML, CSS(SCSS) and JavaScript, Lista Mona is a Tagalog Term of "List It!", it is a simple to do list than can have multiple notes and can be saved in local storage
   ## Appearance in Laptop
   ![laptop-appearance](https://user-images.githubusercontent.com/108915592/213602087-44dc853e-0647-485b-a035-2cffc4f8e87d.PNG)
   ## Appearance in Tablet
